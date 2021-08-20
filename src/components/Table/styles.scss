@@ -1,0 +1,25 @@
+.rdt_TableHeadRow {
+  background-color: #dbe6ea !important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #444 !important;
+  min-height: 46px !important;
+}
+
+.rdt_TableCol_Sortable {
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+.rdt_Table {
+  border: 1px solid #dadada !important;
+  border-radius: 10px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  width: 100% !important;
+}
+
+.rdt_TableRow {
+  min-height: 56px !important;
+  outline-style: none !important;
+}

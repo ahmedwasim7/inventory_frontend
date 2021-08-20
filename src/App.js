@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
-function App() {
+import { Header, OverlayLoader } from 'components'
+import PrivateRoute from 'routes/PrivateRoute'
+import PublicRoute from 'routes/PublicRoute'
+
+import { Login, Dashboard } from 'containers'
+
+require('dotenv').config()
+
+export default () => {
+  const renderHeader = ![].includes(window.location.pathname) && <Header />
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Router>
+      <ToastContainer />
 
-export default App;
+      <div className={'app'}>
+        <Suspense fallback={<OverlayLoader />}>
+          {renderHeader}
+
+          <div className={'flex-container'} style={{ justifyContent: 'center' }}>
+            <Switch>
+              <PublicRoute unprotected={true} component={Login} path={['/', '/login']} exact />
+              <PrivateRoute component={Dashboard} path={'/dashboard'} exact />
+              <Route path={'*'} exact={true} component={Login} />
+            </Switch>
+          </div>
+        </Suspense>
+      </div>
+    </Router>
+  )
+}

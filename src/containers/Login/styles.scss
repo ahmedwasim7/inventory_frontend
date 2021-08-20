@@ -1,0 +1,116 @@
+.login-page {
+  text-align: center;
+
+  .logo {
+    margin-bottom: 10px;
+    margin-top: 50px;
+    width: 20%;
+  }
+
+  .welcome-heading {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    padding-bottom: 32px;
+  }
+
+  .login-main-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    form {
+      display: contents;
+    }
+  }
+
+  input {
+    border: 1px solid #64838e;
+    border-radius: 3px;
+    font-size: 16px;
+    height: 64px;
+    padding: 0;
+    text-indent: 15px;
+    width: 365px;
+  }
+
+  .submit-button {
+    background-color: #64838e;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.25));
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    height: 64px;
+    margin-top: 10px;
+    width: 365px;
+  }
+
+  .forgot-password-text {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 35px;
+
+    a {
+      color: #444;
+      text-decoration: none;
+    }
+  }
+
+  .input-height {
+    height: 104px
+  }
+
+  .input-height:last-child {
+    text-align: -webkit-center;
+  }
+
+  .disabled-login-button {
+    cursor: default;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .login-page .logo {
+    width: 30%;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .login-page {
+    .login-main-container {
+      display: block;
+    }
+  }
+
+  .login-page {
+    input {
+      width: 70%;
+    }
+
+    .submit-button {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .login-page {
+    input {
+      width: 80%;
+    }
+
+    .submit-button {
+      width: 80%;
+    }
+  }
+  .login-page .logo {
+    width: 50%;
+  }
+}

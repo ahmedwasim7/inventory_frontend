@@ -1,0 +1,39 @@
+.inventory-form {
+  display: contents;
+
+  input, select {
+    border: 1px solid #64838e;
+    border-radius: 3px;
+    font-size: 16px;
+    height: 44px;
+    padding: 0;
+    text-indent: 15px;
+    width: 334px;
+  }
+
+  > div:first-child {
+    height: 47vh;
+    overflow: auto;
+  }
+
+  div.field-container {
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+    }
+  }
+
+  div.button-container {
+    bottom: 8vh;
+    margin-top: 20px;
+    position: absolute;
+
+    button {
+      width: 150px;
+      margin-right: 20px;
+    }
+  }
+}

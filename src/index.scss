@@ -1,0 +1,72 @@
+html, body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.form-error {
+  color: #ee9441 !important;
+  font-size: 15px !important;
+  height: 19px;
+  margin-top: 5px !important;
+  text-align: left;
+}
+
+.ReactModal__Overlay--after-open {
+  background-color: rgba(196, 196, 196, 0.2) !important;
+}
+
+.ReactModal__Content {
+  min-height: 343px;
+  min-width: 360px;
+  padding: 31px 50px !important;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+
+  .modal-close {
+    color: #444;
+    cursor: pointer;
+    font-family: Avenir;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    height: 20px;
+    left: 1032px;
+    line-height: 20px;
+    top: 132.09px;
+    transform: rotate(-45deg);
+    width: 27px;
+  }
+}
+
+.modal-body {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .ReactModal__Content {
+    min-width: 300px;
+    width: 300px !important;
+  }
+  .inventory-form > div > div {
+    flex-direction: column;
+  }
+  .inventory-form-main-container form input, .inventory-form-main-container form select {
+    width: 290px !important;
+  }
+}
